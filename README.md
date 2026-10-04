@@ -6,6 +6,8 @@ A browser-based car dealership simulator. Find client orders, bid on damaged
 cars at live auctions, arrange delivery, diagnose and repair vehicles, then
 close profitable deals and grow the business.
 
+**[Play the portfolio demo](https://airan1.github.io/car-dealer-from-garage-to-showroom/)**
+
 **Russian title:** «Автодилер: Из гаража в автосалон»
 
 ## Gameplay
