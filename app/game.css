@@ -1,0 +1,927 @@
+.level-chip {
+  color: #7ec0ff;
+}
+.game-hq {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+.level-card,
+.missions-card {
+  background: linear-gradient(145deg, #15232c, #10181e);
+  border: 1px solid #30434f;
+  border-radius: 12px;
+  padding: 20px;
+}
+.level-card header,
+.missions-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.level-card header small,
+.missions-card header small {
+  color: #69a9db;
+  letter-spacing: 1.2px;
+}
+.level-card h3,
+.missions-card h3 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+.level-card header > b,
+.missions-card header > b {
+  font: 900 15px monospace;
+}
+.xp-track {
+  height: 9px;
+  background: #25333c;
+  border-radius: 9px;
+  margin: 17px 0;
+  overflow: hidden;
+}
+.xp-track i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #2389ff, #64c4ff);
+  border-radius: 9px;
+  box-shadow: 0 0 14px #278bff;
+}
+.unlock-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+.unlock-row span {
+  padding: 11px;
+  border: 1px solid #2b3942;
+  border-radius: 8px;
+  opacity: 0.45;
+}
+.unlock-row span.unlocked {
+  opacity: 1;
+  background: #182a35;
+  border-color: #35617c;
+}
+.unlock-row i {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #26333c;
+  font-style: normal;
+  font-size: 10px;
+}
+.unlock-row .unlocked i {
+  background: #1c7346;
+  color: #77e3a0;
+}
+.unlock-row b,
+.unlock-row small {
+  display: block;
+  margin-top: 6px;
+}
+.unlock-row b {
+  font-size: 11px;
+}
+.missions-card > div {
+  display: grid;
+  grid-template-columns: 27px 1fr;
+  gap: 10px;
+  padding: 11px 0;
+  border-top: 1px solid #293841;
+}
+.missions-card > div > i {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid #42535e;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+}
+.missions-card > div.done > i {
+  background: #1b7145;
+  border-color: #1b7145;
+  color: white;
+}
+.missions-card > div.done span {
+  opacity: 0.55;
+}
+.missions-card span b,
+.missions-card span small {
+  display: block;
+}
+.missions-card span b {
+  font-size: 12px;
+}
+.missions-card span small {
+  color: #75aed7;
+  margin-top: 3px;
+}
+.career-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 12px;
+  border: 1px solid #30414c;
+  background: #121d23;
+  border-radius: 10px;
+}
+.career-strip > div {
+  padding: 14px 17px;
+  border-right: 1px solid #30414c;
+}
+.career-strip > div:last-child {
+  border: 0;
+}
+.career-strip small,
+.career-strip b {
+  display: block;
+}
+.career-strip small {
+  color: #71838e;
+  letter-spacing: 1px;
+}
+.career-strip b {
+  font: 900 13px monospace;
+  margin-top: 7px;
+}
+.reward-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: #03080dde;
+  backdrop-filter: blur(12px);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+.event-card,
+.deal-result {
+  width: min(600px, 100%);
+  background: radial-gradient(circle at 50% 0, #213b4c, #121d24 55%);
+  border: 1px solid #416478;
+  border-radius: 20px;
+  padding: 38px;
+  text-align: center;
+  box-shadow: 0 35px 100px #000b;
+}
+.event-card.good {
+  border-color: #3d8a5d;
+}
+.event-card.bad {
+  border-color: #9b4d43;
+}
+.event-icon,
+.result-burst {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  background: #2c89ff;
+  box-shadow: 0 0 0 10px #2c89ff20;
+  font-size: 30px;
+  font-weight: 900;
+}
+.event-card.good .event-icon {
+  background: #32a365;
+}
+.event-card.bad .event-icon {
+  background: #bd5145;
+}
+.event-card h2 {
+  font-size: 27px;
+  margin: 10px;
+}
+.event-card p {
+  color: #94a4ae;
+}
+.event-card > b {
+  display: block;
+  font: 900 22px monospace;
+  color: #72dca0;
+  margin: 20px;
+}
+.event-card button,
+.deal-result > button {
+  border: 0;
+  background: #2c89ff;
+  border-radius: 9px;
+  padding: 14px 24px;
+  font-weight: 900;
+}
+.deal-result h1 {
+  font-size: 34px;
+  margin: 10px;
+}
+.deal-result > p {
+  color: #93a3ad;
+}
+.result-money {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 25px 0;
+  border: 1px solid #344852;
+  border-radius: 10px;
+}
+.result-money span {
+  padding: 16px;
+  border-right: 1px solid #344852;
+}
+.result-money span:last-child {
+  border: 0;
+}
+.result-money small,
+.result-money b {
+  display: block;
+}
+.result-money b {
+  font: 900 18px monospace;
+  margin-top: 7px;
+}
+.result-money .profit b {
+  color: #62df91;
+}
+.result-money .loss b {
+  color: #ff786f;
+}
+.result-rewards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.result-rewards span {
+  padding: 13px;
+  background: #1a2932;
+  border-radius: 8px;
+}
+.result-rewards b,
+.result-rewards small {
+  display: block;
+}
+.result-rewards b {
+  font: 900 16px monospace;
+  color: #75baff;
+}
+.result-rewards small {
+  margin-top: 4px;
+  color: #81939e;
+}
+@media (max-width: 800px) {
+  .game-hq {
+    grid-template-columns: 1fr;
+  }
+  .career-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .career-strip > div:nth-child(2) {
+    border-right: 0;
+  }
+  .unlock-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .result-money,
+  .result-rewards {
+    grid-template-columns: 1fr;
+  }
+  .result-money span {
+    border-right: 0;
+    border-bottom: 1px solid #344852;
+  }
+  .deal-result,
+  .event-card {
+    padding: 25px 17px;
+  }
+  .deal-result h1 {
+    font-size: 27px;
+  }
+}
+.auction-registration,
+.auction-countdown {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  background: radial-gradient(circle at 50% 20%, #203746, #10191f 58%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.auction-registration > span {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #2c89ff;
+  font: 900 31px monospace;
+  box-shadow: 0 0 0 10px #2c89ff20;
+}
+.auction-registration > small,
+.auction-countdown > small {
+  margin-top: 22px;
+  color: #73b8ed;
+  letter-spacing: 1.4px;
+}
+.auction-registration h2,
+.auction-countdown h2 {
+  font-size: 25px;
+  margin: 9px;
+}
+.auction-registration p,
+.auction-countdown p {
+  max-width: 390px;
+  color: #91a1ab;
+}
+.auction-registration > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 25px;
+  border: 1px solid #344954;
+  border-radius: 9px;
+  padding: 14px 20px;
+  margin: 10px 0 17px;
+}
+.auction-registration > div small {
+  color: #758793;
+}
+.auction-registration > div b {
+  font: 900 14px monospace;
+}
+.auction-registration > button,
+.auction-countdown > button {
+  border: 0;
+  background: #2c89ff;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-weight: 900;
+}
+.auction-registration > button:disabled {
+  opacity: 0.35;
+}
+.auction-registration > em {
+  font-size: 10px;
+  color: #71828c;
+  margin-top: 12px;
+  font-style: normal;
+}
+.auction-countdown > span {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 8px solid #2c89ff;
+  font: 900 58px monospace;
+  box-shadow: 0 0 35px #2c89ff50;
+  order: -1;
+}
+.auction-countdown > button {
+  margin-top: 14px;
+  background: #26353e;
+  color: #9fb0bb;
+  border: 1px solid #3c4f5a;
+}
+@media (max-width: 580px) {
+  .auction-countdown {
+    justify-content: flex-start;
+    padding: 28px 18px 22px;
+  }
+  .auction-countdown > span {
+    width: 104px;
+    height: 104px;
+    border-width: 7px;
+    font-size: 46px;
+    flex: 0 0 auto;
+  }
+  .auction-countdown > small {
+    margin-top: 16px;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+  .auction-countdown h2 {
+    font-size: 21px;
+  }
+  .auction-countdown p {
+    margin: 5px 0;
+  }
+}
+.live-head button {
+  font-size: 12px !important;
+}
+.live-head button:hover {
+  color: #ff8c83;
+}
+.emergency-funding {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 18px;
+  margin-top: 14px;
+  padding: 20px;
+  border: 1px solid #8c6932;
+  background: linear-gradient(120deg, #302719, #1c211c);
+  border-radius: 12px;
+}
+.funding-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #e0a53d;
+  color: #1b160e;
+  font-size: 22px;
+}
+.emergency-funding small {
+  color: #e9b85b;
+  letter-spacing: 1px;
+}
+.emergency-funding h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+.emergency-funding p {
+  margin: 0;
+  color: #aeaaa0;
+}
+.emergency-funding > div > span {
+  display: block;
+  font-size: 11px;
+  color: #8e8b83;
+  margin-top: 7px;
+}
+.emergency-funding > button {
+  border: 0;
+  background: #e4a83e;
+  color: #21180c;
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-weight: 900;
+}
+.emergency-funding > button:disabled {
+  opacity: 0.4;
+}
+.rewarded-ad {
+  width: min(650px, 100%);
+  background: #111a20;
+  border: 1px solid #435967;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 35px 100px #000b;
+}
+.rewarded-ad > header {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #1a2730;
+  border-bottom: 1px solid #344751;
+}
+.rewarded-ad header span {
+  font-size: 11px;
+  background: #e6aa3f;
+  color: #21170a;
+  padding: 4px 7px;
+  border-radius: 4px;
+  font-weight: 900;
+}
+.rewarded-ad header b {
+  font-size: 11px;
+  color: #8295a1;
+}
+.ad-placeholder {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 35px;
+  background: radial-gradient(circle, #24445b, #10181e 65%);
+}
+.ad-placeholder i {
+  width: 75px;
+  height: 75px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: #2c89ff;
+  font-style: normal;
+  font-size: 28px;
+  font-weight: 900;
+  box-shadow: 0 0 35px #2c89ff66;
+}
+.ad-placeholder small {
+  margin-top: 20px;
+  color: #79b9ea;
+  letter-spacing: 1.4px;
+}
+.ad-placeholder h2 {
+  font-size: 27px;
+  margin: 10px;
+}
+.ad-placeholder p {
+  max-width: 430px;
+  color: #8fa0ab;
+}
+.rewarded-ad > footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 20px;
+}
+.rewarded-ad footer span {
+  font-size: 12px;
+  color: #83949f;
+}
+.rewarded-ad footer button {
+  border: 0;
+  background: #2c89ff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 900;
+}
+.rewarded-ad footer button:disabled {
+  background: #273640;
+  color: #73838d;
+}
+@media (max-width: 650px) {
+  .emergency-funding {
+    grid-template-columns: 1fr;
+  }
+  .funding-icon {
+    display: none;
+  }
+  .emergency-funding > button {
+    width: 100%;
+  }
+  .rewarded-ad > footer {
+    display: block;
+  }
+  .rewarded-ad footer button {
+    width: 100%;
+    margin-top: 11px;
+  }
+}
+
+/* Company development — a compact upgrade tree with permanent gameplay effects. */
+.development-open {
+  border: 0;
+  background: transparent;
+  color: #62b3ff;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.company-development {
+  display: grid;
+  gap: 18px;
+  padding-bottom: 30px;
+}
+.development-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+  min-height: 190px;
+  padding: 30px 34px;
+  border: 1px solid #31546b;
+  border-radius: 20px;
+  background:
+    linear-gradient(115deg, #102838ee, #0d1a23ef),
+    radial-gradient(circle at 72% 25%, #258dff55, transparent 42%);
+  box-shadow: inset 0 1px #ffffff0d, 0 22px 55px #0005;
+}
+.development-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#3f78931a 1px, transparent 1px),
+    linear-gradient(90deg, #3f78931a 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(90deg, transparent, #000 55%, transparent);
+}
+.development-hero > div {
+  position: relative;
+  z-index: 1;
+}
+.development-hero > div:first-child small,
+.upgrade-copy > small,
+.active-bonuses header small {
+  color: #67b8ff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+.development-hero h2 {
+  margin: 7px 0 8px;
+  font-size: 34px;
+}
+.development-hero p {
+  max-width: 690px;
+  margin: 0;
+  color: #96a8b5;
+}
+.garage-capacity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 295px;
+  padding: 20px;
+  border: 1px solid #3b6e8d;
+  border-radius: 16px;
+  background: #0a1720c9;
+}
+.garage-capacity > span,
+.upgrade-icon,
+.active-bonuses header > div {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #257ed0, #14528e);
+  color: white;
+  box-shadow: 0 10px 28px #0b69bc55, inset 0 1px #ffffff35;
+}
+.garage-capacity svg,
+.upgrade-icon svg,
+.active-bonuses header svg {
+  width: 29px;
+  height: 29px;
+}
+.garage-capacity > div {
+  display: grid;
+  gap: 3px;
+}
+.garage-capacity small {
+  color: #8297a5;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.garage-capacity b {
+  font-size: 28px;
+}
+.garage-capacity em {
+  color: #56db92;
+  font-size: 12px;
+  font-style: normal;
+}
+.upgrade-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.upgrade-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  gap: 16px;
+  min-height: 245px;
+  padding: 22px;
+  border: 1px solid #304b5c;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #162833, #101c24);
+  box-shadow: inset 0 1px #ffffff0b, 0 16px 35px #0003;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.upgrade-card:hover:not(.locked) {
+  transform: translateY(-3px);
+  border-color: #3b8fd0;
+}
+.upgrade-card.bought {
+  border-color: #2e8a62;
+  background: linear-gradient(145deg, #133328, #10231e);
+}
+.upgrade-card.bought .upgrade-icon {
+  background: linear-gradient(145deg, #2ca66c, #176442);
+  box-shadow: 0 10px 28px #24a26744, inset 0 1px #ffffff35;
+}
+.upgrade-card.locked {
+  opacity: .68;
+}
+.upgrade-copy {
+  min-width: 0;
+}
+.upgrade-copy h3 {
+  margin: 5px 0 6px;
+  font-size: 19px;
+}
+.upgrade-copy p {
+  min-height: 46px;
+  margin: 0 0 11px;
+  color: #8fa1ad;
+  font-size: 13px;
+}
+.upgrade-copy strong {
+  display: block;
+  color: #58d999;
+  font-size: 13px;
+}
+.upgrade-card > button {
+  grid-column: 1 / -1;
+  min-height: 46px;
+  border: 1px solid #409bf0;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #278cf0, #176bc0);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+.upgrade-card > button:disabled {
+  border-color: #344854;
+  background: #1b2a33;
+  color: #71838f;
+  cursor: default;
+}
+.upgrade-card.bought > button:disabled {
+  border-color: #26764f;
+  background: #173b2b;
+  color: #60dda0;
+}
+.upgrade-branches {
+  display: grid;
+  gap: 18px;
+}
+.upgrade-branch {
+  overflow: hidden;
+  border: 1px solid #304c5d;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #14242e, #0e1a22);
+  box-shadow: 0 18px 42px #0002;
+}
+.upgrade-branch > header {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 22px;
+  border-bottom: 1px solid #2d4351;
+  background: #172a35b8;
+}
+.upgrade-branch > header > span {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #278df0, #155da3);
+  color: white;
+}
+.upgrade-branch > header svg {
+  width: 25px;
+  height: 25px;
+}
+.upgrade-branch > header h3,
+.upgrade-branch > header p {
+  margin: 0;
+}
+.upgrade-branch > header small {
+  color: #67b9ff;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+}
+.upgrade-branch > header h3 {
+  margin-top: 2px;
+  font-size: 20px;
+}
+.upgrade-branch > header p {
+  margin-top: 3px;
+  color: #8ea1ad;
+  font-size: 13px;
+}
+.upgrade-branch > header > b {
+  min-width: 62px;
+  padding: 9px 12px;
+  border: 1px solid #3979a5;
+  border-radius: 10px;
+  color: #72c1ff;
+  text-align: center;
+}
+.upgrade-ladder {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: 12px;
+  overflow-x: auto;
+  padding: 18px;
+}
+.upgrade-ladder .upgrade-card {
+  grid-template-columns: 42px 1fr;
+  min-height: 228px;
+  padding: 16px;
+  gap: 11px;
+}
+.upgrade-ladder .upgrade-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+}
+.upgrade-ladder .upgrade-icon svg {
+  width: 21px;
+  height: 21px;
+}
+.upgrade-step-number {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  color: #5e7585;
+  font: 900 14px/1 var(--font-mono, monospace);
+}
+.upgrade-ladder .upgrade-copy h3 {
+  padding-right: 18px;
+  font-size: 15px;
+}
+.upgrade-ladder .upgrade-copy p {
+  min-height: 54px;
+  font-size: 12px;
+}
+.upgrade-ladder .upgrade-card > button {
+  min-height: 42px;
+  padding: 7px;
+  font-size: 12px;
+}
+.auction-registration > span svg {
+  width: 34px;
+  height: 34px;
+}
+.active-bonuses {
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  gap: 22px;
+  align-items: center;
+  padding: 20px 24px;
+  border: 1px solid #304c5d;
+  border-radius: 17px;
+  background: #111f28;
+}
+.active-bonuses header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.active-bonuses header > div {
+  width: 48px;
+  height: 48px;
+}
+.active-bonuses header > span {
+  display: grid;
+}
+.active-bonuses header b {
+  font-size: 16px;
+}
+.active-bonuses > div {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border: 1px solid #2c424f;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.active-bonuses > div span {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-right: 1px solid #2c424f;
+}
+.active-bonuses > div span:last-child {
+  border-right: 0;
+}
+.active-bonuses > div small {
+  color: #758894;
+  font-size: 9px;
+  letter-spacing: .8px;
+}
+.active-bonuses > div b {
+  color: #dceaf3;
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .upgrade-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .active-bonuses { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .development-hero { grid-template-columns: 1fr; padding: 22px; }
+  .development-hero h2 { font-size: 27px; }
+  .garage-capacity { min-width: 0; }
+  .upgrade-grid { grid-template-columns: 1fr; }
+  .upgrade-card { min-height: 220px; }
+  .active-bonuses > div { grid-template-columns: 1fr 1fr; }
+  .active-bonuses > div span { border-bottom: 1px solid #2c424f; }
+}
